@@ -13,8 +13,9 @@ import {
 import { useMoralis } from "react-moralis";
 
 const History = ({ open, setOpen }) => {
-  const [data, setdata] = useState([]);
+   
   const { Moralis, account } = useMoralis();
+  let data = [];
 
   const getComponents = async () => {
     await Moralis.start({
@@ -25,10 +26,10 @@ const History = ({ open, setOpen }) => {
     query.equalTo("Customer", account);
 
     const result = await query.find();
-    result.ForEach((item) => {
-      setdata(item);
+    result.forEach((item) => {
+     
+      data.push(item.attributes);
     });
-  
   };
   useEffect(() => {
     getComponents();
