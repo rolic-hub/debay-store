@@ -9,7 +9,7 @@ const Home = () => {
     <div className="cover">
       <Navbar />
       <div>
-        <Card style={{ marginTop: "100px", marginLeft: "220px", width:"max-content", marginBottom:"-100px"}}>
+        <Card style={{ marginTop: "100px", marginLeft: "180px", width:"max-content", marginBottom:"-100px"}}>
           <strong>
             Click on account details to login your wallet then click Categories to select a product category to explore
           </strong>
