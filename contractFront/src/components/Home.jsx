@@ -11,7 +11,7 @@ const Home = () => {
       <div>
         <Card style={{ marginTop: "100px", marginLeft: "250px", width:"max-content", marginBottom:"-100px"}}>
           <strong>
-            Click on Categories to select a product category to explore
+            Click on account details to login your wallet then click Categories to select a product category to explore
           </strong>
         </Card>
         <Card className="card" title="About DeBay">
