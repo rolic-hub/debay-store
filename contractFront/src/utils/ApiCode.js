@@ -19,9 +19,6 @@ export const ApiCode = ({ children }) => {
     
   }, [Products]);
 
-  if (isLoading) return <Loading />; 
-
- 
   const url = "https://fakestoreapi.com/products/categories";
   
 
