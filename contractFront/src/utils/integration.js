@@ -132,12 +132,13 @@ export const Integration = ({ children }) => {
           contractAddress: Nftcontract,
           functionName: "transferNmint",
           abi: DeAbi,
+           msgValue: Moralis.Units.ETH(price.toString(18)),
           params: {
             to: reciever,
             id: id,
             nftamount: 1,
             data: [],
-            msgValue: Moralis.Units.ETH(price.toString()),
+           
           },
         };
         const transfer = await Moralis.executeFunction(senOptions);
