@@ -25,7 +25,7 @@ const Navbar = () => {
   const [showcategory, setshowcategory] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
-  const [connect, setConnect] = useState(true);
+  const [connect, setConnect] = useState(false);
   const {account, isAuthenticated} = useMoralis();
 
   return (
