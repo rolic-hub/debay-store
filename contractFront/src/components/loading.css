@@ -1,0 +1,9 @@
+.example {
+ justify-self: center;
+ margin-top: 50%;
+ margin-left: 50%;
+  
+  
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}

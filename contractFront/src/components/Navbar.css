@@ -1,0 +1,32 @@
+.Navbar {
+  display: flex;
+  background-color: aqua;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.category {
+  display: inline-flex;
+  background-color: black
+  
+}
+.sub-category {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: medium;
+  color:aliceblue
+ 
+  
+}
+.links {
+  padding-left: 20px;
+  color: gray;
+
+
+}
+

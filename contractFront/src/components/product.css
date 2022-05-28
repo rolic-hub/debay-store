@@ -1,0 +1,22 @@
+.product {
+    display: flex;
+    justify-content: start;
+    padding: 50px;
+    gap: 40px;
+}
+.product-img {
+    width: 30vw;
+    overflow: hidden;
+    border: 1px solid rgb(228, 228, 228);
+} 
+.product-details {
+    width: calc(100vw - 500px);
+    color: gray;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 20px;
+    padding: 5px;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    
+}

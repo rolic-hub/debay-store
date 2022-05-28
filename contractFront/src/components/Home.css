@@ -1,0 +1,21 @@
+.cover{
+ background: rgb(63,183,171);
+background: radial-gradient(circle, rgba(63,183,171,0.22779534176952032) 0%, rgba(0,0,0,1) 100%);
+}
+
+.carousel-img {
+  min-width: 100vw;
+  height: 750px;
+  object-fit: cover;
+ 
+}
+.card{
+  border-radius: 8px;
+  margin-top: 10rem;
+  color: cadetblue;
+  width: 60vw;
+  margin-left: 10rem;
+  margin-bottom: 3rem;
+  font-size: large;
+  
+}
