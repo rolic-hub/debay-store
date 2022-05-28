@@ -40,7 +40,8 @@ const History = ({ open, setOpen }) => {
           <ModalHeader>Transactions</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            {data.map((item, i) => {
+    {data.length > 0 ?
+   {data.map((item, i) => {
               <Container key={i}>
                 <div style={{ display: "flex" }}>
                   {item.attributes.ProductImage.map((pimg, i) => (
@@ -69,7 +70,9 @@ const History = ({ open, setOpen }) => {
                   <strong>Total price: {item.attributes.Totalprice}</strong>
                 </div>
               </Container>;
-            })}
+            })}: (
+              <p>No Transaction made<p>
+            )}
           </ModalBody>
         </ModalContent>
       </Modal>
