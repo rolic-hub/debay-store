@@ -40,44 +40,43 @@ const History = ({ open, setOpen }) => {
           <ModalHeader>Transactions</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-    {data.length > 0 ?
-   {data.map((item, i) => {
-              <Container key={i}>
-                <div style={{ display: "flex" }}>
-                  {item.attributes.ProductImage.map((pimg, i) => (
-                    <Box key={i}>
-                      <img
-                        height="100px"
-                        width="100px"
-                        src={pimg}
-                        alt="product"
-                      />
-                    </Box>
-                  ))}
-                  {item.attributes.Product.map((title, i) => (
-                    <Box key={i}>
-                      <strong>{title}</strong>
-                    </Box>
-                  ))}
-                </div>
-                <div style={{ display: "flex" }}>
-                  <strong>User: {item.attributes.Customer}</strong>
+    {data.length > 0 ? (
+ {data.map((item, i) => {
+  <Container key={i}>
+    <div style={{ display: "flex" }}>
+      {item.attributes.ProductImage.map((pimg, i) => (
+        <Box key={i}>
+          <img
+            height="100px"
+            width="100px"
+            src={pimg}
+            alt="product"
+          />
+        </Box>
+      ))}
+      {item.attributes.Product.map((title, i) => (
+        <Box key={i}>
+          <strong>{title}</strong>
+        </Box>
+      ))}
+    </div>
+    <div style={{ display: "flex" }}>
+      <strong>User: {item.attributes.Customer}</strong>
 
-                  <strong>Delivery Address: {item.attributes.Delivery}</strong>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <strong>txHash: {item.attributes.txhash}</strong>
-                  <strong>Total price: {item.attributes.Totalprice}</strong>
-                </div>
-              </Container>;
-            })}: (
-              <p>No Transaction made<p>
-            )}
+      <strong>Delivery Address: {item.attributes.Delivery}</strong>
+    </div>
+    <div style={{ display: "flex" }}>
+      <strong>txHash: {item.attributes.txhash}</strong>
+      <strong>Total price: {item.attributes.Totalprice}</strong>
+    </div>
+  </Container>;
+})}
+    ) : <p>No Transaction </p>}
           </ModalBody>
         </ModalContent>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
 export default History;
