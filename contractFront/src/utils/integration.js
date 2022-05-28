@@ -107,6 +107,17 @@ export const Integration = ({ children }) => {
 
   const handleOk = async (product) => {
     const reciever = "0x9353CdB9598937A9a9DD1D792A4D822EE8415E8D";
+    if (total <= 500) {
+      setId(1);
+    } else if (total > 500 && total <= 1000) {
+      setId(2);
+    } else if (total > 1000 && total <= 1500) {
+      setId(3);
+    } else if (total > 1500 && total <= 2200) {
+      setId(4);
+    } else if (total > 2200) {
+      setId(5);
+    }
     try {
       await Moralis.start({
         serverUrl: process.env.REACT_APP_MORALIS_SERVER,
@@ -115,17 +126,7 @@ export const Integration = ({ children }) => {
 
       if (cartPage.length > 0) {
         const price = (total / dataFeed).toString();
-        if (total <= 500) {
-          setId(1);
-        } else if (total > 500 && total <= 1000) {
-          setId(2);
-        } else if (total > 1000 && total <= 1500) {
-          setId(3);
-        } else if (total > 1500 && total <= 2200) {
-          setId(4);
-        } else if (total > 2200) {
-          setId(5);
-        }
+       
 
         const senOptions = {
           contractAddress: Nftcontract,

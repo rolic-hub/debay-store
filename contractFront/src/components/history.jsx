@@ -22,7 +22,7 @@ const History = ({ open, setOpen }) => {
       appId: process.env.REACT_APP_MORALIS_APPID,
     });
     const query = new Moralis.Query("History");
-    query.equalTo("account", account);
+    query.equalTo("Customer", account);
 
     const result = await query.find();
     console.log(result);
