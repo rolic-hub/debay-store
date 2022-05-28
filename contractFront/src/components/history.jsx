@@ -25,12 +25,14 @@ const History = ({ open, setOpen }) => {
     query.equalTo("Customer", account);
 
     const result = await query.find();
-    console.log(result);
-    setdata(result);
+    result.ForEach((item) => {
+      setdata(item);
+    });
+  
   };
   useEffect(() => {
     getComponents();
-  }, []);
+  }, [account]);
 
   return (
     <div>
