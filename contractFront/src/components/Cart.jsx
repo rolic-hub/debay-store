@@ -15,19 +15,20 @@ const Cart = () => {
   const [discount, setDiscount] = useState(0)
 
   const itemsPrice = cartPage.reduce((a, c) => a + c.qty * c.price, 0);
- 
-  
+   totalPrice(itemsPrice, deliveryFee);
 
   useEffect(() => {
    
     if(bar >= 100){
       setDeliveryFee(0);
+       totalPrice(itemsPrice, deliveryFee);
     }
     else{
   const fee =(itemsPrice * 5 / 100);
   setDeliveryFee(fee);
+       totalPrice(itemsPrice, deliveryFee);
     }
-   totalPrice(itemsPrice, deliveryFee);
+  
   }, [cartPage.length !== 0, bar]);
 
   useEffect(() => {
